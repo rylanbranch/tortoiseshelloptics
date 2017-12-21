@@ -7,9 +7,10 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: Helvetica, sans-serif;
+	width: 100%
 }
 
-p {
+p, h1, h2, h3, h4, h5, h6, span {
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
     -webkit-margin-start: 0px;
@@ -32,6 +33,11 @@ p {
 	justify-content: flex-end;
 }
 
+.flex-container {
+	display: flex;
+	justify-content: center;
+}
+
 .hero-content {
 	width: 960px;
 }
@@ -48,6 +54,10 @@ p {
 	margin-top: 1rem;
 }
 
+.secondary-nav {
+	display: none;
+}
+
 .logo img {
 	height: 1.5rem;
 	width: auto;
@@ -57,4 +67,181 @@ p {
 .logo {
 	display: inline-flex;
 	align-items: center;
+}
+
+.main-nav span {
+	padding: 0 2rem;
+}
+
+.hero-overlay {
+	margin-top: 10rem;
+	margin-right: -2rem;
+	padding: 1.5rem 5rem;
+	background-color: white;
+	font-size: 2rem;
+	font-weight: bold;
+	line-height: 1.2;
+}
+
+.services {
+	display: flex;
+}
+
+.service {
+	width: 5rem;
+	height: 8rem;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+}
+
+.service img {
+	width: 5rem;
+}
+
+.service.exams img {
+	width: 3.5rem;
+}
+
+.info-header {
+	background-color: cadetblue;
+	font-weight: bold;
+	font-size: 1rem;
+	width: 10rem;
+	padding: 0.5rem 1.25rem;
+	color: white;
+	margin-bottom: 1rem;
+}
+
+.info-point {
+	width: 35%;
+}
+
+.philosophy {
+	padding-right: 5%;
+}
+
+.info {
+	display: flex;
+	justify-content: center;
+	width: 960px;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+}
+
+.footer-content {
+	background-color: azure;
+	width: 960px;
+	display: flex;
+	margin-top: 5rem;
+	align-items: center;
+}
+
+.footer-content img {
+	height: 1.5rem;
+	padding: 4rem 1rem 4rem 4rem;
+}
+
+@media only screen and (max-width: 1024px) {
+	.info {
+		width: 100%;
+	}
+	.hero-content {
+		width: 100%;
+	}
+	.head-nav {
+		margin-top: 0;
+	}
+	footer, .footer-content {
+		width: 100%
+	}
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 470px) {
+	.hero-overlay {
+		margin-top: 5rem;
+		margin-right: 2rem;
+		padding: .75rem 4rem;
+		font-size: 1.33rem;
+	}
+		.hero {
+		height: 22rem;
+	}
+}
+
+@media only screen and (max-width: 470px) {
+	.hero {
+		height: 17rem;
+		background-position: 20%; 
+	}
+	.primary-nav {
+		display: none;
+	}
+	.secondary-nav {
+		display: inline;
+	}
+	.logo-text {
+		display: none;
+	}
+	.hero-overlay {
+		margin-top: 9rem;
+		margin-right: 0;
+		padding: 1rem 0;
+		font-size: 1rem;
+		text-align: center;
+		width: 100%;
+	}
+	.services {
+		padding: 3.77rem 0;
+		flex-direction: column;
+		align-items: center;
+	}
+	.service p {
+		font-size: 0.77rem;
+	}
+	.service {
+		padding: 0;
+		height: auto;
+	}
+	.service img {
+		padding-bottom: 1rem;
+	}
+	.service.exams, .service.fittings {
+		padding: 0 0 1.54rem 0;
+	}
+	.info {
+		display: block;
+	}
+	.info-header {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+	.info-point {
+		width: 100%;
+		padding-bottom: 4rem;
+	}
+	.info-desc {
+		padding: 0 0.5rem 0 0.5rem;
+	}
+	.footer-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.footer-content p {
+		display: none;
+	}
+	.philosophy {
+		padding-right: 0;
+	}
+	.footer-content img {
+
+	}
 }
